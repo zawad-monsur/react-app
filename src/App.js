@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Person = props => {
+    return (
+        <>
+            <h4>Book Name: {props.bookname}</h4>
+            <p>Released Date : {props.date}</p>
+        </>
+    )
 }
 
-export default App;
+const App = () => {
+    const name = 'John'
+    const isNameShowing = false
+
+    return (
+        <div className='App'>
+            <Person bookname={"John's Career"} date={'10/12/21'} />
+            <Person bookname={"Zawad's Career"} date={'10/12/21'} />
+            <Person bookname={"Vai's Career"} date={'10/12/21'} />
+            <Person bookname={"Rick's Career"} date={'10/12/21'} />
+        </div>
+    )
+}
+
+export default App
