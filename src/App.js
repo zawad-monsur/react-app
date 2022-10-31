@@ -11,11 +11,11 @@ const Person = props => {
 }
 
 const App = () => {
-    const [counter, setCounter] = useState(0) //name of the state, setter of the state
+    const [counter, setCounter] = useState(20) //name of the state, setter of the state
 
-    useEffect(() => {
-        setCounter(100)
-    }, [])
+    // useEffect(() => {
+    //     setCounter(100)
+    // }, [])
 
     return (
         <div className='App'>
